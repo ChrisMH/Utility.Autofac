@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Autofac", "Utility.Autofac\Utility.Autofac.csproj", "{FE3E2307-2BD0-434B-83D6-9CD4FEEE8106}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Autofac.Test", "Utility.Autofac.Test\Utility.Autofac.Test.csproj", "{49693427-E317-4C1C-87BF-D14F361A8D71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Autofac.Test.UnloadedModule", "Utility.Autofac.Test.UnloadedModule\Utility.Autofac.Test.UnloadedModule.csproj", "{E44E4C34-61F8-4EB7-B901-671FC34760ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE3E2307-2BD0-434B-83D6-9CD4FEEE8106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE3E2307-2BD0-434B-83D6-9CD4FEEE8106}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE3E2307-2BD0-434B-83D6-9CD4FEEE8106}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE3E2307-2BD0-434B-83D6-9CD4FEEE8106}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49693427-E317-4C1C-87BF-D14F361A8D71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49693427-E317-4C1C-87BF-D14F361A8D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49693427-E317-4C1C-87BF-D14F361A8D71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49693427-E317-4C1C-87BF-D14F361A8D71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E44E4C34-61F8-4EB7-B901-671FC34760ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E44E4C34-61F8-4EB7-B901-671FC34760ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E44E4C34-61F8-4EB7-B901-671FC34760ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E44E4C34-61F8-4EB7-B901-671FC34760ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

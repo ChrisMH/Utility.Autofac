@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Utility.Autofac</id>
+    <version>$version$</version>
+    <title>Utility.Autofac</title>
+    <authors>Chris Hogan</authors>
+    <owners>Chris Hogan</owners>
+    <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
+    <projectUrl>https://github.com/ChrisMH/Utility.Autofac</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Autofac utility classes</description>
+    <copyright>Copyright 2011</copyright>
+    <tags>utility autofac</tags>
+  </metadata>
+</package>
