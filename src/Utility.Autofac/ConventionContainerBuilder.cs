@@ -23,7 +23,9 @@ namespace Utility.Autofac
 
       // Scan for IModule-derived concrete types
       var di = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory);
-      var assemblyFileNames = di.GetFiles("*.dll", SearchOption.AllDirectories)
+      var assemblyFileNames = di
+        .GetFiles("*.dll", SearchOption.AllDirectories)
+        .Concat(di.GetFiles("*.exe", SearchOption.AllDirectories))
         .Where(fi => !(excludeAutofacModules && Path.GetFileNameWithoutExtension(fi.FullName).StartsWith("Autofac")))
         .Select(fi => fi.FullName);
 
