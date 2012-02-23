@@ -12,5 +12,14 @@
     <description>Autofac utility classes</description>
     <copyright>Copyright 2011</copyright>
     <tags>utility autofac</tags>
+    <dependencies>
+      <dependency id="Autofac" version="2.5.2"/>
+    </dependencies>
   </metadata>
+  <files>
+    <file src="bin\Release\Utility.Autofac.dll" target ="lib\net40"/>
+    <file src="bin\Release\Utility.Autofac.pdb" target ="lib\net40"/>
+    <file src="bin\ReleaseSL5\Utility.Autofac.dll" target ="lib\sl50"/>
+    <file src="bin\ReleaseSL5\Utility.Autofac.pdb" target ="lib\sl50"/>
+  </files>
 </package>

@@ -21,6 +21,15 @@ namespace Utility.Autofac
     {
       var autofacModuleTypes = new List<Type>();
 
+      #if SILVERLIGHT
+            
+      foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
+      {
+          autofacModuleTypes.AddRange(assembly.GetTypes().Where(t => !t.IsAbstract && t.GetInterfaces().Contains(typeof (global::Autofac.Core.IModule))));
+      }
+
+      #else
+
       // Scan for IModule-derived concrete types
       var di = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory);
       var assemblyFileNames = di
@@ -44,6 +53,8 @@ namespace Utility.Autofac
           // Not a .Net assembly
         }
       }
+
+      #endif
 
       // Create and register all discovered module types
       var builder = new ContainerBuilder();
