@@ -1,21 +1,32 @@
-$srcRoot = '.\src'                  # relative to script directory
-$buildFile = 'Utility.Autofac.sln'  # relative to $srcRoot
+# relative to script directory
+$srcRoot = '.\src'                       
+
+# relative to $srcRoot
+[string[]] $buildFiles = 'Utility.Autofac\Utility.Autofac.csproj', 'Utility\Utility.AutofacSL5.csproj'  
+[string[]] $nuspecFiles = 'Utility.Autofac\Utility.Autofac.nuspec'
+$versionFile = 'SharedAssemblyInfo.cs'
+
 $buildConfiguration = 'Release'
-$nuspecFile = 'Utility.Autofac\Utility.Autofac.nuspec'  # relative to $srcRoot
-$versionFile = 'SharedAssemblyInfo.cs'  # relative to $srcRoot
 $outputPath = "$home\Dropbox\Packages"
 
 Import-Module BuildUtilities
 
-$versionFile =Resolve-Path(Join-Path $srcRoot $versionFile)
-$buildFile = Resolve-Path(Join-Path $srcRoot $buildFile)
-$nuspecFile = Resolve-Path(Join-Path $srcRoot $nuspecFile)
+$versionFile = Resolve-Path(Join-Path $srcRoot $versionFile)
 
 $version = Get-Version $versionFile
   
 New-Path $outputPath
-#Invoke-Build $buildFile $buildConfiguration
-New-Package $nuspecFile $version $outputPath
+
+
+#foreach($buildFile in $buildFiles)
+#{
+#  Invoke-Build (Resolve-Path(Join-Path $srcRoot $buildFile)) $buildConfiguration
+#}
+
+foreach($nuspecFile in $nuspecFiles)
+{
+  New-Package (Resolve-Path(Join-Path $srcRoot $nuspecFile)) $version $outputPath
+}
 
 Remove-Module BuildUtilities
 
