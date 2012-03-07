@@ -9,6 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Autofac.Test.Unload
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.AutofacSL5", "Utility.Autofac\Utility.AutofacSL5.csproj", "{653C1664-C158-40D2-8289-1F548A25E3CB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuspec", "nuspec", "{C7A52621-4F54-406A-9C2E-0FB7A940F248}"
+	ProjectSection(SolutionItems) = preProject
+		..\nuspec\Utility.Autofac.nuspec = ..\nuspec\Utility.Autofac.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
